@@ -3,7 +3,6 @@ import DigitButton from "./DigitButton";
 import OperationButton from "./OperationButton";
 import "./style.css";
 
-// tipovi akcija
 export const ACTIONS = {
   ADD_DIGIT: "add-digit",
   CHOOSE_OPERATION: "choose-operation",
@@ -12,7 +11,6 @@ export const ACTIONS = {
   EVALUATE: "evaluate",
 };
 
-//imamo akciju koja ce imti type i payload
 function reducer(state, { type, payload }) {
   switch (type) {
     case ACTIONS.ADD_DIGIT:
@@ -37,6 +35,7 @@ function reducer(state, { type, payload }) {
         return state;
       }
 
+      // promena znaka
       if (state.currentOperand == null) {
         return {
           ...state,
